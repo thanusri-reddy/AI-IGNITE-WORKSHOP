@@ -4,72 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Appointment Booking</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f0f6ff;
-            color: #183153;
-        }
 
-        header {
-            background: #0878c9;
-            color: white;
-            padding: 22px;
-            text-align: center;
-        }
+    <title>City Care Hospital</title>
 
-        nav {
-            background: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 15px;
-            color: #0878c9;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 35px auto;
-            padding: 25px;
-            background: white;
-            border-radius: 12px;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-
-        button {
-            width: 100%;
-            padding: 14px;
-            background: #0878c9;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #055b99;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -84,9 +25,11 @@
 </nav>
 
 <div class="container" id="booking">
+
     <h2>Book Your Appointment</h2>
 
     <form id="appointmentForm">
+
         <label>Patient Name</label>
         <input type="text" placeholder="Enter your name" required>
 
@@ -113,8 +56,11 @@
         <textarea placeholder="Describe your concern"></textarea>
 
         <button type="submit">Book Appointment</button>
+
     </form>
+
     <p id="message"></p>
+
 </div>
 
 <footer id="contact">
@@ -122,15 +68,9 @@
     <p>© 2026 City Care Hospital</p>
 </footer>
 
-<script>
-    document.getElementById("appointmentForm")
-    .addEventListener("submit", function(event) {
-        event.preventDefault();
-        document.getElementById("message").textContent =
-            "Your appointment request has been submitted!";
-        this.reset();
-    });
-</script>
+<!-- Connect JavaScript -->
+<script src="script.js"></script>
 
 </body>
 </html>
+
