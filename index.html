@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Booking</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            color: #183153;
+        }
+
+        header {
+            background: #0878c9;
+            color: white;
+            padding: 22px;
+            text-align: center;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 15px;
+            color: #0878c9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 35px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #0878c9;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #055b99;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>City Care Hospital</h1>
+    <p>Your Health, Our Priority</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#booking">Book Appointment</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="booking">
+    <h2>Book Your Appointment</h2>
+
+    <form id="appointmentForm">
+        <label>Patient Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter phone number" required>
+
+        <label>Select Department</label>
+        <select required>
+            <option value="">Choose Department</option>
+            <option>Cardiology</option>
+            <option>Dermatology</option>
+            <option>Neurology</option>
+            <option>Pediatrics</option>
+            <option>Orthopedics</option>
+        </select>
+
+        <label>Appointment Date</label>
+        <input type="date" required>
+
+        <label>Reason for Visit</label>
+        <textarea placeholder="Describe your concern"></textarea>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+    <p id="message"></p>
+</div>
+
+<footer id="contact">
+    <p>City Care Hospital | Contact: 9876543210</p>
+    <p>© 2026 City Care Hospital</p>
+</footer>
+
+<script>
+    document.getElementById("appointmentForm")
+    .addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("message").textContent =
+            "Your appointment request has been submitted!";
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
